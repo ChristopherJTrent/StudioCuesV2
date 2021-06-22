@@ -128,7 +128,7 @@ class masterWindow:
 		if(attemptAutoSize):
 			for mon in screeninfo.screeninfo.get_monitors():
 				if mon.x > 0:
-					print(str(mon.x) + " " + str(mon.y) + " " + str(mon.height) + " " + mon.name)
+					#print(str(mon.x) + " " + str(mon.y) + " " + str(mon.height) + " " + mon.name)
 					this.SlaveWindow.geometry(f"{mon.width}x{mon.height}+{mon.x}+{mon.y}")
 					this.SlaveWindow.overrideredirect(1)
 		else:
@@ -139,6 +139,7 @@ class masterWindow:
 						height = simpledialog.askinteger("StudioCues",f"What is the height of {mon.name} in pixels?")
 						this.SlaveWindow.geometry(f"{width}x{height}+{mon.x}+0")
 						this.SlaveWindow.overrideredirect(1)
+						break
 
 	def writeConfiguration(self, location='StudioCues.configuration'):
 		with open(location, 'w+') as configFile:
