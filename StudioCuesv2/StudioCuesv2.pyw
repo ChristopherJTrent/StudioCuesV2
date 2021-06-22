@@ -139,7 +139,7 @@ class masterWindow:
 						height = simpledialog.askinteger("StudioCues",f"What is the height of {mon.name} in pixels?")
 						this.SlaveWindow.geometry(f"{width}x{height}+{mon.x}+0")
 						this.SlaveWindow.overrideredirect(1)
-						break
+
 	def writeConfiguration(self, location='StudioCues.configuration'):
 		with open(location, 'w+') as configFile:
 			self.configuration.write(configFile)
